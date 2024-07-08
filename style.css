@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* Resets the default margin and padding for all elements, and sets box-sizing to border-box for consistent element sizing */
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    /* Sets the font family for the body element */
+    background-color: #000000;
+    /* Sets the background color of the body to black */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Centers the content horizontally and vertically using Flexbox */
+    height: 100vh;
+    /* Sets the height of the body to 100% of the viewport height */
+}
+
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: auto;
+    /* Sets the width of the container to 80% of its parent, with a maximum width of 1200px and centers it horizontally */
+    text-align: center;
+    /* Centers the text within the container */
+}
+
+h1 {
+    font-size: 40px;
+    color: rgb(255, 255, 255);
+    /* Sets the font size and color of the heading */
+    margin-bottom: 20px;
+    /* Adds a margin below the heading */
+}
+
+figure {
+    position: relative;
+    /* Sets the position to relative for the figure element, allowing for absolute positioning within it */
+}
+
+#featured {
+    width: 100%;
+    height: auto;
+    /* Sets the width to 100% of the container and maintains the aspect ratio */
+    border: 5px solid #fff;
+    /* Adds a white border around the image */
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.3);
+    /* Adds a shadow around the image for a 3D effect */
+}
+
+figcaption {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #555;
+    /* Adds a top margin, sets the font size, and color for the caption text */
+}
+
+#thumbnails {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style: none;
+    /* Uses Flexbox to center the thumbnails and wrap them if necessary, and removes default list styling */
+    margin-top: 20px;
+    gap: 10px;
+    /* Adds a top margin and gap between the thumbnails */
+}
+
+#thumbnails li {
+    transition: filter 0.3s;
+    /* Adds a transition effect for the filter property */
+}
+
+#thumbnails img {
+    width: 240px;
+    height: 160px;
+    object-fit: cover;
+    /* Sets the width and height of the thumbnails and ensures the image covers the area without distortion */
+    cursor: pointer;
+    /* Changes the cursor to a pointer when hovering over the image */
+    border: 2px solid #fff;
+    /* Adds a white border around the thumbnails */
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.3);
+    /* Adds a shadow around the thumbnails for a 3D effect */
+}
+
+#thumbnails img.inactive {
+    filter: grayscale(100%);
+    /* Applies a grayscale filter to the inactive thumbnails */
+}
+
+#thumbnails img.active {
+    filter: none;
+    /* Removes the filter for active thumbnails */
+}
